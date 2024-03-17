@@ -15,6 +15,8 @@ $service = query("SELECT*FROM service");
 
 <body>
   <h3>Perintah Kerja Spooring & Balancing</h3>
+  <a href="tambah.php">Tambah Data Service</a>
+  <br><br>
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>

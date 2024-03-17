@@ -21,3 +21,21 @@ function query($query)
   }
   return $rows;
 }
+
+function tambah($data)
+{
+  $conn = koneksi();
+  $nopol = htmlspecialchars($data['nopol']);
+  $sa = htmlspecialchars($data['sa']);
+  $sp = htmlspecialchars($data['sp']);
+  $bl = htmlspecialchars($data['bl']);
+  $nitro = htmlspecialchars($data['nitro']);
+  $bp = htmlspecialchars($data['bp']);
+  $type = htmlspecialchars($data['type']);
+  $gambar = htmlspecialchars($data['gambar']);
+  $keluhan = htmlspecialchars($data['keluhan']);
+  $query = "INSERT INTO service VALUES(null,'$nopol','$sa','$sp','$bl','$nitro','$bp','$type','$gambar','$keluhan')";
+  mysqli_query($conn, $query);
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
+}
